@@ -18,7 +18,7 @@
  * Please provide the definitions in the
  * included cpp file, do not erase the stuff I put in there please
  * DO NOT MODIFY THIS FILE, I WILL USE MY OWN COPY
-/============================================================================*/
+ /============================================================================*/
 
 //zero out array that tracks words and their occurrences
 void clearArray();
@@ -37,19 +37,19 @@ int getArrayWord_NumbOccur_At(int i);
 bool processFile(std::fstream &myfstream);
 
 /*take 1 line and extract all the tokens from it
-feed each token to processToken for recording*/
+ feed each token to processToken for recording*/
 void processLine(std::string &myString);
 
 /*Keep track of how many times each token seen*/
 void processToken(std::string &token);
 
 /*if you are debugging the file must be in the project parent directory
-  in this case Project2 with the .project and .cProject files*/
-bool openFile(std::fstream& myfile, const std::string& myFileName,
+ in this case Project2 with the .project and .cProject files*/
+bool openFile(std::fstream &myfile, const std::string &myFileName,
 		std::ios_base::openmode mode = std::ios_base::in);
 
 /*iff myfile is open then close it*/
-void closeFile(std::fstream& myfile);
+void closeFile(std::fstream &myfile);
 
 /* serializes all content in myEntryArray to file outputfilename
  * returns  FAIL_FILE_DID_NOT_OPEN if cannot open outputfilename

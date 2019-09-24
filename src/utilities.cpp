@@ -27,21 +27,21 @@ string intToString(int Number) {
 //get rid of these three chars so 'end.' and 'end\r' become 'end'
 //also dump spaces so if in the end the string length is 0 then it was a space so do not add it
 //this would be much easier with c++11 compiler support set but thats not what eclipse defaults to
-void strip_char(string &s, char badchar){
+void strip_char(string &s, char badchar) {
 	const int NUMBER_CHARS_TO_ERASE = 1;
 	if (s.empty())
 		return;
 
 	std::size_t found = s.find(badchar);
-	if (found!=std::string::npos)
-		s.erase(found,NUMBER_CHARS_TO_ERASE);
+	if (found != std::string::npos)
+		s.erase(found, NUMBER_CHARS_TO_ERASE);
 }
 
-bool strip_unwanted_chars(string &mystring){
-	strip_char(mystring,'\r');
-	strip_char(mystring,'.');
-	strip_char(mystring,' ');
-	strip_char(mystring,',');
-	return (mystring.length()>0);
+bool strip_unwanted_chars(string &mystring) {
+	strip_char(mystring, '\r');
+	strip_char(mystring, '.');
+	strip_char(mystring, ' ');
+	strip_char(mystring, ',');
+	return (mystring.length() > 0);
 }
 
